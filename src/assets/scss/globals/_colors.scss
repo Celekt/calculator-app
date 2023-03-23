@@ -1,0 +1,50 @@
+body[data-theme="theme-blue"] {
+  --main-background: hsl(222, 26%, 31%);
+  --secondary-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+  --key-background: hsl(30, 25%, 89%);
+  --key-shadow: hsl(28, 16%, 65%);
+  --key-secondary: hsl(6, 63%, 50%);
+  --key-secondary-shadow: hsl(6, 70%, 34%);
+  --key-tertiary: hsl(225, 21%, 49%);
+  --key-tertiary-shadow: hsl(224, 28%, 35%);
+  --text-primary: hsl(221, 14%, 31%);
+  --text-secondary: hsl(0, 0%, 100%);
+  --text-tertiary: hsl(0, 0%, 100%);
+  --text-screen: hsl(0, 0%, 100%);
+}
+
+body[data-theme="theme-white"]  {
+  --main-background: hsl(0, 0%, 90%);
+  --secondary-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+  --key-background: hsl(45, 7%, 89%);
+  --key-shadow: hsl(35, 11%, 61%);
+  --key-secondary: hsl(25, 98%, 40%);
+  --key-secondary-shadow: hsl(25, 99%, 27%);
+  --key-tertiary: hsl(185, 42%, 37%);
+  --key-tertiary-shadow: hsl(185, 58%, 25%);
+  --text-primary: hsl(60, 10%, 19%);
+  --text-secondary: hsl(0, 0%, 100%);
+  --text-tertiary: hsl(0, 0%, 100%);
+  --text-screen: hsl(60, 10%, 19%);
+}
+
+body[data-theme="theme-dark"]  {
+  --main-background: hsl(268, 75%, 9%);
+  --secondary-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+  --key-background: hsl(268, 47%, 21%);
+  --key-shadow: hsl(290, 70%, 36%);
+  --key-secondary: hsl(176, 100%, 44%);
+  --key-secondary-shadow: hsl(177, 92%, 70%);
+  --key-tertiary: hsl(281, 89%, 26%);
+  --key-tertiary-shadow: hsl(285, 91%, 52%);
+  --text-primary: hsl(52, 100%, 62%);
+  --text-secondary: hsl(0, 0%, 100%);
+  --text-tertiary: hsl(198, 20%, 13%);
+  --text-screen: hsl(52, 100%, 62%);
+}
+
+$background-color: var(--main-background);
+$text-color: white;

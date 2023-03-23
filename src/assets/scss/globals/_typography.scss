@@ -1,0 +1,33 @@
+@use "../util" as u;
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+$font-md: clamp(u.rem(10), u.rem(6) + 0.5vw, u.rem(15));
+
+h1 {
+  font-size: clamp(u.rem(20),u.rem(12) + 1vw, u.rem(30));
+}
+
+h2 {
+  font-size: $font-md;
+}
+
+p {
+  font-size: clamp(u.rem(36),u.rem(18) + 2vw, u.rem(52));
+  margin: 0;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+button {
+  font-size: u.rem(24);
+  font-weight: 700;
+}

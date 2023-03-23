@@ -1,0 +1,136 @@
+@use "../globals/colors" as c;
+@use "../util" as u;
+@use "../globals/typography" as f;
+
+.calc {
+  background-color: var(--main-background);
+  width: max(35%, u.rem(375));
+  margin: 0 auto 0 auto;
+}
+
+.calc__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin: 0 5px 20px 5px;
+  color: var(--text-screen);
+}
+
+.header-left {
+  display: flex;
+  align-items: end;
+
+  h2 {
+    margin-right: u.rem(20);
+  }
+}
+
+.toggle-wrap {
+  display: flex;
+  flex-direction: column;
+
+  .toggle-numbers {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: u.rem(5);
+
+    span {
+      font-size: f.$font-md;
+      flex: 1 1 0;
+      text-align: center;
+    }
+  }
+
+  .toggle-theme {
+    position: relative;
+    display: inline-flex;
+    border-radius: u.rem(10);
+    background-color: var(--secondary-background);
+    input {
+      opacity: 0;
+      margin: 0;
+      width: 33%;
+      height: 110%;
+
+      &:checked {
+        background-color: white;
+
+        &[data-toggle="1"] ~ span {
+          left: 20%;
+        }
+
+        &[data-toggle="2"] ~ span {
+          left: 50%;
+        }
+
+        &[data-toggle="3"] ~ span {
+          left: 80%
+        }
+      }
+    }
+
+    &__switch {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: u.rem(10);
+      width: u.rem(10);
+      border-radius: 50%;
+      background-color: var(--key-secondary);
+      transition: left 200ms ease-out;
+      pointer-events: none;
+    }
+  }
+}
+
+.calc__screen {
+  background-color: var(--screen-background);
+  border-radius: u.rem(5);
+  margin-bottom: u.rem(15);
+  p{
+    text-align: right;
+    padding: u.rem(25) u.rem(20) u.rem(25) 0;
+    color: var(--text-screen);
+  }
+}
+
+.calc__numpad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: u.rem(15);
+  grid-row-gap: u.rem(15);
+  padding: u.rem(20);
+  background-color: var(--secondary-background);
+  border-radius: u.rem(10);
+
+  button {
+    box-shadow: 0 3px var(--key-shadow);
+    background-color: var(--key-background);
+  }
+
+  .del-button {
+    background-color: var(--key-tertiary);
+    color: white;
+    box-shadow: 0 3px var(--key-tertiary-shadow);
+  }
+
+  .reset-button {
+    grid-area: 5 / 1 / 6 / 3;
+    background-color: var(--key-tertiary);
+    color: white;
+    box-shadow: 0 3px var(--key-tertiary-shadow);
+  }
+
+  .equal-button {
+    grid-area: 5 / 3 / 6 / 5;
+    background-color: var(--key-secondary);
+    color: white;
+    box-shadow: 0 3px var(--key-secondary-shadow);
+  }
+}
+
+
+
+
